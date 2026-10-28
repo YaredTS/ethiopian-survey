@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethiopian Context English Guide - Needs Assessment Survey</title>
-    <!-- Tailwind CSS -->
+    <title>Ethiopian Context English Curriculum - Needs Assessment</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
                     colors: {
                         ethiopiaGreen: '#078930',
-                        ethiopiaYellow: '#FCD116',
+                        ethiopiaYellow: '#FCDD09',
                         ethiopiaRed: '#DA121A',
                     }
                 }
@@ -24,431 +20,348 @@
         }
     </script>
 </head>
-<body class="h-full bg-slate-50 text-slate-800 flex flex-col justify-between selection:bg-yellow-200 selection:text-slate-900">
+<body class="bg-slate-50 text-slate-800 font-sans min-h-full flex flex-col">
 
-    <!-- Header / Navbar -->
-    <header class="bg-slate-900 text-white shadow-md border-b-4 border-ethiopiaYellow">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-ethiopiaGreen via-ethiopiaYellow to-ethiopiaRed flex items-center justify-center font-bold text-slate-900 text-lg shadow">
-                    🇪🇹
-                </div>
-                <div>
-                    <h1 class="text-lg font-bold tracking-tight">Applied English Ethiopia Edition</h1>
-                    <p class="text-xs text-slate-400">Cultural Needs Assessment Survey / የባህል ፍላጎት ጥናት ቅጽ</p>
-                </div>
+    <!-- Top Banner / Header -->
+    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div>
+                <span class="text-xs uppercase tracking-wider text-ethiopiaYellow font-bold">ZXP Languages • Curriculum Adaptation</span>
+                <h1 class="text-lg font-bold">Ethiopian Context Needs Assessment</h1>
             </div>
-            <div class="flex items-center gap-2 text-xs bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
-                <span class="w-2 h-2 rounded-full bg-ethiopiaGreen animate-pulse"></span>
-                <span id="stepIndicator" class="font-medium text-slate-300">Part 1 of 5</span>
+            <div class="text-xs bg-slate-800 px-3 py-1.5 rounded-full text-slate-300 border border-slate-700">
+                English / አማርኛ
             </div>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="max-w-3xl w-full mx-auto px-4 py-6 sm:py-8 flex-grow">
+    <!-- Main Content Container -->
+    <main class="max-w-3xl mx-auto px-4 py-8 flex-grow w-full">
         
-        <!-- Welcome Card / Intro -->
-        <div id="introCard" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-6 transition-all duration-300">
-            <div class="inline-block bg-emerald-50 text-ethiopiaGreen font-semibold text-xs px-3 py-1 rounded-full mb-3 border border-emerald-200">
-                Welcome / እንኳን ደህና መጡ
-            </div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Help Us Shape English Learning in Ethiopia</h2>
-            <p class="text-sm font-medium text-slate-600 mb-4 font-serif">ለኢትዮጵያ ተማሪዎች የሚስማማ የእንግሊዝኛ መማሪያ መጽሐፍ ለማዘጋጀት ሀሳብዎን ያካፍሉን።</p>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                This questionnaire collects insights about your daily life, cultural traditions, educational routine, and local preferences. Your answers will guide us in creating engaging, locally grounded lessons for the upcoming Ethiopian edition.
+        <!-- Intro Card -->
+        <div id="introCard" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-6">
+            <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-ethiopiaGreen mb-4 font-bold text-xl">🇪🇹</div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Help Us Build an Engaging English Learning Guide for Ethiopia</h2>
+            <p class="text-slate-600 mb-4 leading-relaxed">
+                We are adapting our A1 English textbook series to reflect local daily life, culture, family structures, and student experiences across Ethiopia. Your insights will directly shape the lessons, stories, and activities.
             </p>
-            <button onclick="startSurvey()" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm">
-                <span>Start Questionnaire / ጥናቱን ጀምር</span>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6 text-sm text-slate-700 space-y-1">
+                <p><strong>ማሳሰቢያ (Note):</strong> ይህ ቅጽ የእንግሊዝኛ መማሪያ መጽሐፋችንን ከኢትዮጵያባህልና የኑሮ ሁኔታ ጋር ለማጣጣም የሚረዳ መረጃ ለመሰብሰብ የተዘጋጀ ነው።</p>
+                <p class="text-slate-500 text-xs">Estimated time: 5-8 minutes • 5 sections total</p>
+            </div>
+            <button type="button" onclick="startSurvey()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>Start Questionnaire / ጥያቄዎቹን ጀምር</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </button>
         </div>
 
-        <!-- Survey Form Container (Hidden initially) -->
-         <form id="surveyForm" name="survey" method="POST" netlify onsubmit="handleFormSubmit(event)" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 transition-all duration-300">
-    
-    <!-- Progress Bar -->
-    <div class="mb-6">
-        <div class="flex justify-between text-xs font-semibold text-slate-500 mb-1.5">
-            <span id="partTitleHeader">Part 1: Daily Life & Domestic Routines</span>
-            <span id="percentText">20%</span>
-        </div>
-        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-            <div id="progressBar" class="bg-gradient-to-r from-ethiopiaGreen via-ethiopiaYellow to-ethiopiaRed h-full transition-all duration-300 w-1/5"></div>
-        </div>
-    </div>
-
-    <!-- Sections Container -->
-    <div id="formStepsContainer">
-        <!-- Injected via JavaScript -->
-    </div>
-
-    <!-- Navigation Buttons -->
-    <div class="flex justify-between items-center mt-8 pt-6 border-t border-slate-100">
-        <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-sm transition-all flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            <span>Previous / ኋላ</span>
-        </button>
-        <div class="ml-auto">
-            <button type="button" id="nextBtn" onclick="changeStep(1)" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
-                <span>Next / ቀጥል</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
-            <button type="submit" id="submitBtn" class="hidden px-6 py-2.5 rounded-xl bg-ethiopiaGreen hover:bg-emerald-700 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
-                <span>Submit Responses / አስረክብ</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            </button>
-        </div>
-    </div>
-</form>
-
-        <!-- Success / Summary Screen (Hidden initially) -->
-        <div id="successScreen" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 text-center">
-            <div class="w-16 h-16 bg-emerald-100 text-ethiopiaGreen rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
-                ✓
-            </div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Thank You! / እናመሰግናለን!</h2>
-            <p class="text-slate-600 text-sm max-w-md mx-auto mb-6">
-                Your responses have been recorded successfully. Your feedback will directly contribute to creating an authentic English learning experience in Ethiopia.
-            </p>
+        <!-- Survey Form (Netlify Enabled) -->
+        <form id="surveyForm" name="survey" method="POST" netlify onsubmit="handleFormSubmit(event)" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 transition-all duration-300">
             
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-left mb-6 max-h-64 overflow-y-auto text-xs font-mono text-slate-700" id="summaryOutput">
-                <!-- Summary JSON / Text -->
+            <!-- Progress Bar -->
+            <div class="mb-6">
+                <div class="flex justify-between text-xs font-semibold text-slate-500 mb-1.5">
+                    <span id="partTitleHeader">Part 1: Daily Life & Domestic Routines</span>
+                    <span id="percentText">20%</span>
+                </div>
+                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                    <div id="progressBar" class="bg-gradient-to-r from-ethiopiaGreen via-ethiopiaYellow to-ethiopiaRed h-full transition-all duration-300 w-1/5"></div>
+                </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-3">
-                <button onclick="copySummary()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all shadow">
-                    Copy Answers / መልሶችን ቅዳ
-                </button>
-                <button onclick="resetSurvey()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-semibold px-5 py-3 rounded-xl transition-all">
-                    Submit Another / ሌላ ቅጽ ሞል
-                </button>
+            <!-- Sections Container -->
+            <div id="formStepsContainer">
+                <!-- Dynamically Injected via JavaScript -->
             </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between items-center mt-8 pt-6 border-t border-slate-100">
+                <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-sm transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Previous / ኋላ</span>
+                </button>
+                <div class="ml-auto flex items-center gap-3">
+                    <button type="button" id="nextBtn" onclick="changeStep(1)" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
+                        <span>Next / ቀጥል</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                    <button type="submit" id="submitBtn" class="hidden px-6 py-2.5 rounded-xl bg-ethiopiaGreen hover:bg-emerald-700 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
+                        <span>Submit Responses / አስረክብ</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Success Message View -->
+        <div id="successCard" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
+            <div class="w-16 h-16 bg-emerald-100 text-ethiopiaGreen rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">✓</div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Thank You! / እናመሰግናለን!</h2>
+            <p class="text-slate-600 mb-6 max-w-md mx-auto">
+                Your responses have been successfully recorded. You are helping build a wonderful learning experience for students in Ethiopia.
+            </p>
+            <button onclick="location.reload()" class="px-6 py-2.5 rounded-xl bg-slate-900 text-white font-semibold text-sm">
+                Submit Another Response / ሌላ ምላሽ አስገባ
+            </button>
         </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 mt-12">
-        <div class="max-w-4xl mx-auto px-4 text-center space-y-1">
-            <p class="font-medium text-slate-300">Applied English Series • Ethiopia Edition Project</p>
-            <p>Designed for curriculum enhancement and cultural adaptation.</p>
-        </div>
+    <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-200 mt-auto">
+        &copy; 2026 ZXP Languages. All rights reserved.
     </footer>
 
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-2">
-        <span id="toastMsg">Notification message</span>
-    </div>
-
-    <!-- JavaScript Application Logic -->
+    <!-- Script Application Logic -->
     <script>
-        // Survey Data Structure with Bilingual prompts
-        const surveyParts = [
+        const surveySections = [
             {
-                titleEn: "Part 1: Daily Life & Domestic Routines",
-                titleAm: "ክፍል 1፡ የዕለት ተዕለት ሕይወትና ቤተሰባዊ ልምዶች",
+                title: "Part 1: Daily Life & Domestic Routines",
+                subtitle: "ዕለታዊ ሕይወትና የቤት ውስጥ ልማዶች",
                 questions: [
                     {
-                        id: "q1",
-                        en: "What are the most common breakfast foods and drinks in a typical Ethiopian household (e.g., injera leftovers, firfir, porridge, bread with tea/shai/buna)?",
-                        am: "በኢትዮጵያ ቤተሰቦች ውስጥ የተለመዱ የጥዋት ምግቦች እና መጠጦች ምንድን ናቸው? (ለምሳሌ፦ የቀረበ እንጀራ ፍርፍር፣ ዳቦ ከሻይ ወይም ቡና ጋር)"
+                        en: "1. What are the most common breakfast foods and drinks in a typical Ethiopian household (e.g., injera leftovers, firfir, porridge, bread with tea/shai/buna)?",
+                        am: "በተለመደው የኢትዮጵያ ቤተሰብ ውስጥ የተለመዱ የቁርስ ምግቦች እና መጠጦች ምን ምን ናቸው? (ለምሳሌ፦ የቀረው እንጀራ ፍርፍር፣ ገንፎ፣ ዳቦ ከሻይ ወይም ቡና ጋር)"
                     },
                     {
-                        id: "q2",
-                        en: "How are meals traditionally served and shared in your home or community (e.g., eating from a shared communal tray/mesob)?",
-                        am: "በቤተሰብዎ ወይም በማህበረሰብዎ ውስጥ ምግቦች እንዴት ይቀርባሉ? (ለምሳሌ፦ በጋራ ከምሶብ ወይም ከትልቅ ሳህን መብላት)"
+                        en: "2. How are meals traditionally served and shared in your home or community (e.g., eating from a shared communal tray/mesob)?",
+                        am: "በቤትዎ ወይም በማህበረሰብዎ ውስጥ ምግቦች በባህላዊ መንገድ እንዴት ይቀርባሉ እና ይካፈላሉ? (ለምሳሌ፦ ከጋራ ትሪ ወይም ከምሶብ መብላት)"
                     },
                     {
-                        id: "q3",
-                        en: "What are the cultural customs and steps involved when hosting guests or serving traditional coffee (buna ceremony)?",
-                        am: "እንግዳ መቀበልን ወይም የቡና ሥነ-ሥርዓትን በተመለከተ ምን አይነት ባህላዊ ልምዶች አሉ?"
+                        en: "3. What are the cultural customs and steps involved when hosting guests or serving traditional coffee (buna ceremony)?",
+                        am: "እንግዳ ሲቀበሉ ወይም የባህላዊ ቡና ሥነ-ሥርዓት ሲያካሂዱ የሚደረጉ የባህርይ ልማዶች እና ቅደም ተከተሎች ምን ምን ናቸው?"
                     },
                     {
-                        id: "q4",
-                        en: "How do most students and working adults travel around their city or town on a daily basis (e.g., walking, public minibuses, bajaj, city buses)?",
-                        am: "ተማሪዎች እና ሠራተኞች በከተማ ውስጥ ለመንቀሳቀስ በብዛት ምን ይጠቀማሉ? (ለምሳሌ፦ በእግር፣ ታክሲ/ሚኒባስ፣ ባጃጅ፣ የከተማ አውቶቡስ)"
+                        en: "4. How do most students and working adults travel around their city or town on a daily basis (e.g., walking, public minibuses, bajaj, city buses)?",
+                        am: "አብዛኛዎቹ ተማሪዎች እና ሠራተኞች በዕለት ተዕለት እንቅስቃሴያቸው በከተማ ውስጥ ለመዘዋወር ምን ይጠቀማሉ? (ለምሳሌ፦ በእግር፣ ታክሲ፣ ባጃጅ፣ የከተማ ባስ)"
                     },
                     {
-                        id: "q5",
-                        en: "What typical household chores or daily family responsibilities do students have after returning home from school?",
-                        am: "ተማሪዎች ከትምህርት ቤት ሲመለሱ የሚሠሯቸው የተለመዱ የቤት ውስጥ ሥራዎች ወይም ኃላፊነቶች ምን ምን ናቸው?"
+                        en: "5. What typical household chores or daily family responsibilities do students have after returning home from school?",
+                        am: "ተማሪዎች ከትምህርት ቤት ከተመለሱ በኋላ የሚሠሯቸው የተለመዱ የቤት ውስጥ ሥራዎች ወይም ኃላፊነቶች ምን ምን ናቸው?"
                     }
                 ]
             },
             {
-                titleEn: "Part 2: Family Structure & Social Life",
-                titleAm: "ክፍል 2፡ የቤተሰብ አወቃቀርና ማህበራዊ ሕይወት",
+                title: "Part 2: Family Structure & Social Life",
+                subtitle: "የቤተሰብ መዋቅርና ማህበራዊ ሕይወት",
                 questions: [
                     {
-                        id: "q6",
-                        en: "What specific local terms (in Amharic, Afaan Oromo, Somali, Tigrinya, etc.) are used for extended family members, such as maternal vs. paternal uncles and aunts?",
-                        am: "ለአጎቶች እና ለአክስቶች (በእናት እና በአባት በኩል) የሚጠቀሙባቸው የተለዩ የቋንቋ ስሞች አሉ?"
+                        en: "6. What specific local terms (in Amharic, Afaan Oromo, Somali, Tigrinya, etc.) are used for extended family members, such as maternal vs. paternal uncles and aunts?",
+                        am: "ለዘመዶች (ለምሳሌ፦ የእናት ወንድም/እስት እና የአባት ወንድም/እስት) የሚሰጡ የተለዩ የቋንቋ ስሞች አሉ?"
                     },
                     {
-                        id: "q7",
-                        en: "How do family members address and show respect to elders within the household and community?",
-                        am: "በቤተሰብና በማህበረሰብ ውስጥ አዋቂዎችን ወይም ሽማግሌዎችን ማክበር የሚገለጸው እንዴት ነው?"
+                        en: "7. How do family members address and show respect to elders within the household and community?",
+                        am: "የቤተሰብ አባላት በቤት ውስጥና በማህበረሰቡ ውስጥ ለአዋቂዎች/ለሽማግሌዎች ያላቸውን አክብሮት እንዴት ይገልጻሉ?"
                     },
                     {
-                        id: "q8",
-                        en: "What are the major cultural or religious holidays and life events (e.g., Meskel, Eid, Timket, weddings, Mahber) that shape family gatherings?",
-                        am: "ቤተሰቦች በጋራ እንዲሰበሰቡ የሚያደርጉ ትልልቅ ሃይማኖታዊ ወይም ባህላዊ በዓላት/ክስተቶች ምን ምን ናቸው? (ለምሳሌ፦ መስቀል፣ ঈদ፣ ጥምቀት፣ ሰርግ፣ ማህበር)"
+                        en: "8. What are the major cultural or religious holidays and life events (e.g., Meskel, Eid, Timket, weddings, Mahber) that shape family gatherings?",
+                        am: "የቤተሰብ ስብሰባዎችን እና በዓላትን የሚቀርጹ ዋና ዋና የባህርይ ወይም የሃይማኖት በዓላት/ክስተቶች ምን ምን ናቸው? (ለምሳሌ፦ መስቀል፣ ኢድ፣ ጥምቀት፣ ሠርግ፣ ማህበር)"
                     },
                     {
-                        id: "q9",
-                        en: "Where do young people and adults typically socialize outside of work and school (e.g., local cafes, juice houses, community hubs, markets)?",
-                        am: "ወጣቶችና አዋቂዎች ከሥራና ከትምህርት ውጪ የት ይገናኛሉ? (ለምሳሌ፦ ካፌዎች፣ ጁስ ቤቶች፣ የገበያ ቦታዎች)"
+                        en: "9. Where do young people and adults typically socialize outside of work and school (e.g., local cafes, juice houses, community hubs, markets)?",
+                        am: "ወጣቶችና አዋቂዎች ከሥራና ከትምህርት ውጭ የት ይገናኛሉ ወይም ማህበራዊ ሕይወታቸውን ያሳልፋሉ? (ለምሳሌ፦ ካፌዎች፣ ጁስ ቤቶች፣ ማህበራዊ ማዕከላት)"
                     },
                     {
-                        id: "q10",
-                        en: "What traditional games, sports, music, or dances are most popular among youth in your local community?",
-                        am: "በወጣቶች ዘንድ ተወዳጅ የሆኑ ባህላዊ ጨዋታዎች፣ ስፖርቶች፣ ሙዚቃዎች ወይም ጭፈራዎች ምን ምን ናቸው?"
+                        en: "10. What traditional games, sports, music, or dances are most popular among youth in your local community?",
+                        am: "በአካባቢዎ ካሉ ወጣቶች መካከል የትኞቹ የባህርይ ጨዋታዎች፣ ስፖርቶች፣ ሙዚቃዎች ወይም ጭፈራዎች በጣም ተወዳጅ ናቸው?"
                     }
                 ]
             },
             {
-                titleEn: "Part 3: Education, Work & Technology",
-                titleAm: "ክፍል 3፡ ትምህርት፣ ሥራና ቴክኖሎጂ",
+                title: "Part 3: Education, Work & Technology",
+                subtitle: "ትምህርት፣ ሥራና ቴክኖሎጂ",
                 questions: [
                     {
-                        id: "q11",
-                        en: "What does a typical school day look like for you? What are your most common subjects, classroom activities, and school supplies?",
-                        am: "የዕለት ተዕለት የትምህርት ቀንዎ ምን ይመስላል? የትኞቹ ትምህርቶች እና መቁረጫ ዕቃዎች በብዛት ይጠቀማሉ?"
+                        en: "11. What does a typical school day look like for you? What are your most common subjects, classroom activities, and school supplies?",
+                        am: "የእርስዎ የተለመደ የትምህርት ቀን እንዴት ይመስላል? ዋና ዋና ትምህርቶችዎ እና የትምህርት እቃዎችዎ ምን ምን ናቸው?"
                     },
                     {
-                        id: "q12",
-                        en: "How do teachers and students interact during lessons, and what language is most commonly used for explanations?",
-                        am: "በትምህርት ሰዓት አስተማሪዎችና ተማሪዎች እንዴት ይግባባሉ? ማብራሪያዎች በብዛት በምን ቋንቋ ይሰጣሉ?"
+                        en: "12. How do teachers and students interact during lessons, and what language is most commonly used for explanations?",
+                        am: "በትምህርት ጊዜ መምህራንና ተማሪዎች እንዴት ይግባባሉ? ማብራሪያ ለመስጠትብዛት የሚጠቀሙበት ቋንቋ ምንድን ነው?"
                     },
                     {
-                        id: "q13",
-                        en: "What are the most common entry-level jobs, small business ventures, or career paths for young adults finishing school in your area?",
-                        am: "ትምህርት እንዳጠናቀቁ ወጣቶች የሚጀምሯቸው የተለመዱ ሥራዎች ወይም ትናንሽ የንግድ ሥራዎች ምን ምን ናቸው?"
+                        en: "13. What are the most common entry-level jobs, small business ventures, or career paths for young adults finishing school in your area?",
+                        am: "በአካባቢዎ ትምህርት ጨርሰው ወጣቶች የሚሰማሩባቸው የተለመዱ የሥራ መስኮች ወይም ትናንሽ ንግዶች ምን ምን ናቸው?"
                     },
                     {
-                        id: "q14",
-                        en: "Which social media platforms, messaging apps, or websites are most popular for communication and entertainment among students (e.g., Telegram, TikTok, Instagram, Facebook)?",
-                        am: "በተማሪዎች ዘንድ በጣም ተወዳጅ የሆኑ የማህበራዊ ሚዲያ መተግበሪያዎች የትኞቹ ናቸው? (ለምሳሌ፦ ቴሌግራም፣ ቲክቶክ፣ ኢንስታግራም፣ ፌስቡክ)"
+                        en: "14. Which social media platforms, messaging apps, or websites are most popular for communication and entertainment among students (e.g., Telegram, TikTok, Instagram, Facebook)?",
+                        am: "በተማሪዎች ዘንድ ለግንኙነትና መዝናኛነት በብዛት የሚመረጡት የማህበራዊ ሚዲያ መተግበሪያዎች የትኞቹ ናቸው? (ለምሳሌ፦ ቴሌግራም፣ ቲክቶክ፣ ኢንስታግራም፣ ፌስቡክ)"
                     },
                     {
-                        id: "q15",
-                        en: "How do students access the internet and digital devices for learning (e.g., smartphones, shared computers, cyber cafes)?",
-                        am: "ተማሪዎች ለትምህርት የሚሆን ኢንተርኔት እና ዲጂታል መሣሪያዎችን እንዴት ያገኛሉ? (ለምሳሌ፦ ስማርት ስልክ፣ የሳይበር ካፌ)"
+                        en: "15. How do students access the internet and digital devices for learning (e.g., smartphones, shared computers, cyber cafes)?",
+                        am: "ተማሪዎች ለትምህርት ሲሉ ኢንተርኔት እና የዲጂታል መሣሪያዎችን እንዴት ያገኛሉ? (ለምሳሌ፦ ስማርት ስፎኖች፣ የጋራ ኮምፒውተሮች፣ ሳይበር ካፌዎች)"
                     }
                 ]
             },
             {
-                titleEn: "Part 4: Linguistic & Cultural Nuances",
-                titleAm: "ክፍል 4፡ የቋንቋና ባህል ስንክሳሮች",
+                title: "Part 4: Linguistic & Cultural Nuances",
+                subtitle: "የቋንቋና የባህርይ ስውር ነጥቦች",
                 questions: [
                     {
-                        id: "q16",
-                        en: "What are the primary languages spoken at home versus the languages used for school instruction, administration, and business?",
-                        am: "በቤት ውስጥ የሚነገረው ዋና ቋንቋ እና በትምህርት/በሥራ የሚጠቀሙበት ቋንቋ ልዩነታቸው ምንድን ነው?"
+                        en: "16. What are the primary languages spoken at home versus the languages used for school instruction, administration, and business?",
+                        am: "ቤተሰብ ውስጥ የሚነገሩ ዋና ዋና ቋንቋዎች ከትምህርት ቤት መማሪያ ወይም የሥራ ቋንቋዎች ጋር እንዴት ይለያያሉ?"
                     },
                     {
-                        id: "q17",
-                        en: "When learning English, what specific grammar points, pronunciation sounds, or vocabulary topics do students find most challenging?",
-                        am: "እንግሊዝኛ ሲማሩ ተማሪዎች ለመረዳት የሚከብዷቸው የቃላት አጠራር ወይም የሰዋሰው ክፍሎች የትኞቹ ናቸው?"
+                        en: "17. When learning English, what specific grammar points, pronunciation sounds, or vocabulary topics do students find most challenging?",
+                        am: "እንግሊዝኛ ሲማሩ ተማሪዎች ለመረዳት ወይም ለመلفጀት የሚከብዷቸው የگرامር (grammar)፣ የአነባበብ ወይም የቃላት ክፍሎች የትኞቹ ናቸው?"
                     },
                     {
-                        id: "q18",
-                        en: "What local idioms, proverbs, or everyday greetings in your native language do you wish could be represented or translated in English learning materials?",
-                        am: "በእንግሊዝኛ መማሪያ መጽሐፍ ውስጥ ቢካተቱ የሚፈልጓቸው ተወዳጅ የአካባቢዎ ምሳሌያዊ ንግግሮች ወይም ሰላምታዎች አሉ?"
+                        en: "18. What local idioms, proverbs, or everyday greetings in your native language do you wish could be represented or translated in English learning materials?",
+                        am: "በእንግሊዝኛ መማሪያ መጽሐፍት ውስጥ ቢካተቱ ወይም ቢተረጎሙ ደስ የሚልዎ የአካባቢዎ ምሳሌያዊ አነጋገሮች ወይም የዕለት ተዕለት ሰላምታዎች አሉ?"
                     },
                     {
-                        id: "q19",
-                        en: "Are there specific cultural values, communication styles, or community norms that shape how young people express themselves?",
-                        am: "ወጣቶች ሐሳባቸውን ሲገልጹ ተጽዕኖ የሚያሳድሩ ባህላዊ እሴቶች ወይም የማህበረሰብ ደንቦች አሉ?"
+                        en: "19. Are there specific cultural values, communication styles, or community norms that shape how young people express themselves?",
+                        am: "ወጣቶች ራሳቸውን የሚገልጹበትን መንገድ የሚቀርጹ የተለዩ የባህርይ እሴቶች ወይም የማህበረሰብ ደንቦች አሉ?"
                     },
                     {
-                        id: "q20",
-                        en: "How can English lessons best connect global communication skills with local Ethiopian traditions and stories to make learning more engaging?",
-                        am: "የእንግሊዝኛ ትምህርቶች ከዓለም አቀፍ የሐሳብ ልውውጥ ጋር የኢትዮጵያን ባህልና ታሪኮች እንዴት ማጣመር አለባቸው?"
+                        en: "20. How can English lessons best connect global communication skills with local Ethiopian traditions and stories to make learning more engaging?",
+                        am: "የእንግሊዝኛ ትምህርቶች ዓለም አቀፍ የግንኙነት ክህሎቶችን ከኢትዮጵያ ባህላዊ ወጎችና ታሪኮች ጋር በማቀናጀት ይበልጥ ማራኪ እንዲሆኑ እንዴት ማድረግ ይቻላል?"
                     }
                 ]
             },
             {
-                titleEn: "Part 5: Student Personal Profile & Feedback",
-                titleAm: "ክፍል 5፡ የግል መረጃና አስተያየት",
+                title: "Part 5: Student Personal Profile & Feedback",
+                subtitle: "የተማሪው የግል መገለጫና አስተያየት",
                 questions: [
                     {
-                        id: "profile_name",
-                        en: "Full Name (Optional):",
-                        am: "ሙሉ ስም (አማራጭ):",
-                        isInput: true,
-                        type: "text",
-                        placeholder: "e.g., Abebe Kebede"
+                        en: "Student Name / ስም (Optional):",
+                        am: "የተማሪው ስም (አማራጭ)"
                     },
                     {
-                        id: "profile_region",
-                        en: "Region / City / Town:",
-                        am: "ክልል / ከተማ / ዞን:",
-                        isInput: true,
-                        type: "text",
-                        placeholder: "e.g., Addis Ababa, Hawassa, Dire Dawa"
+                        en: "City / Region & Age / ከተማ / ክልል እና ዕድሜ:",
+                        am: "ከተማ / ክልል እና ዕድሜዎ"
                     },
                     {
-                        id: "profile_role",
-                        en: "I am a: (Student, Teacher, Parent, Curriculum Developer)",
-                        am: "እኔ የምወክለው: (ተማሪ፣ አስተማሪ፣ ወላጅ፣ የትምህርት ባለሙያ)",
-                        isInput: true,
-                        type: "text",
-                        placeholder: "e.g., High School Student"
+                        en: "1. What is your favorite thing about learning English, and how do you practice outside of class?",
+                        am: "እንግሊዝኛ በመማር ሂደት ውስጥ በጣም የሚወዱት ነገር ምንድን ነው? ከክፍል ውጭስ እንዴት ይለማመዳሉ?"
                     },
                     {
-                        id: "q21",
-                        en: "What is your favorite thing about learning English, and how do you practice outside of class?",
-                        am: "እንግሊዝኛ መማር ከሚወዷቸው ነገሮች መካከል አንዱ ምንድን ነው? ከክፍል ውጭስ እንዴት ይለማመዳሉ?"
-                    },
-                    {
-                        id: "q22",
-                        en: "Which topics or stories would you most like to see in our upcoming Ethiopian English Learning Book?",
-                        am: "በሚቀጥለው የኢትዮጵያ እንግሊዝኛ መማሪያ መጽሐፍ ውስጥ ሊካተቱ የሚገባቸው ርዕሶች ወይም ታሪኮች ምን ቢሆኑ ደስ ይለዎታል?"
+                        en: "2. Which topics or stories would you most like to see in our upcoming Ethiopian English Learning Book?",
+                        am: "በሚቀጥለው የኢትዮጵያ የእንግሊዝኛ መማሪያ መጽሐፋችን ውስጥ እንዲካተቱ የሚፈልጓቸው ርዕሶች ወይም ታሪኮች ምን ምን ናቸው?"
                     }
                 ]
             }
         ];
 
         let currentStep = 0;
-        const formData = {};
+        const totalSteps = surveySections.length;
 
         function startSurvey() {
             document.getElementById('introCard').classList.add('hidden');
             document.getElementById('surveyForm').classList.remove('hidden');
-            renderStep();
+            renderSteps();
+            updateProgress();
         }
 
-        function renderStep() {
+        function renderSteps() {
             const container = document.getElementById('formStepsContainer');
-            const part = surveyParts[currentStep];
-            
-            // Update Headers & Progress
-            document.getElementById('stepIndicator').innerText = `Part ${currentStep + 1} of ${surveyParts.length}`;
-            document.getElementById('partTitleHeader').innerText = `${part.titleEn} / ${part.titleAm}`;
-            const percent = Math.round(((currentStep + 1) / surveyParts.length) * 100);
-            document.getElementById('percentText').innerText = `${percent}%`;
-            document.getElementById('progressBar').style.width = `${percent}%`;
+            container.innerHTML = '';
 
-            // Toggle Navigation Buttons
-            document.getElementById('prevBtn').classList.toggle('hidden', currentStep === 0);
-            document.getElementById('nextBtn').classList.toggle('hidden', currentStep === surveyParts.length - 1);
-            document.getElementById('submitBtn').classList.toggle('hidden', currentStep !== surveyParts.length - 1);
+            surveySections.forEach((section, index) => {
+                const stepDiv = document.createElement('div');
+                stepDiv.id = `step-${index}`;
+                stepDiv.className = index === currentStep ? 'space-y-6' : 'hidden';
 
-            // Render Questions
-            let html = `<div class="space-y-6">`;
-            html += `<div class="border-b border-slate-100 pb-3 mb-4">
-                        <h3 class="text-lg font-bold text-slate-900">${part.titleEn}</h3>
-                        <p class="text-xs font-medium text-ethiopiaGreen font-serif">${part.titleAm}</p>
-                     </div>`;
-
-            part.questions.forEach((q, idx) => {
-                const val = formData[q.id] || '';
-                html += `
-                    <div class="space-y-2 bg-slate-50/60 p-4 rounded-xl border border-slate-200/80">
-                        <label class="block text-sm font-semibold text-slate-800">
-                            <span class="text-slate-400 font-normal mr-1">${idx + 1}.</span> ${q.en}
-                        </label>
-                        <p class="text-xs font-medium text-slate-600 font-serif">${q.am}</p>
+                let html = `
+                    <div class="border-b border-slate-100 pb-4 mb-6">
+                        <h3 class="text-xl font-bold text-slate-900">${section.title}</h3>
+                        <p class="text-sm font-medium text-ethiopiaGreen mt-0.5">${section.subtitle}</p>
+                    </div>
                 `;
 
-                if (q.isInput) {
+                section.questions.forEach((q, qIndex) => {
                     html += `
-                        <input type="${q.type}" name="${q.id}" value="${val}" placeholder="${q.placeholder}" oninput="saveInput('${q.id}', this.value)"
-                            class="w-full mt-2 px-4 py-2.5 rounded-xl border border-slate-300 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 text-sm outline-none transition bg-white">
+                        <div class="space-y-2 bg-slate-50/60 p-4 rounded-xl border border-slate-100">
+                            <label class="block text-sm font-semibold text-slate-900">${q.en}</label>
+                            <label class="block text-xs font-medium text-slate-600">${q.am}</label>
+                            <textarea name="section_${index}_q_${qIndex}" rows="3" required placeholder="Type your answer here / መልስዎን እዚህ ይጻፉ..." class="w-full rounded-xl border border-slate-300 p-3 text-sm focus:ring-2 focus:ring-slate-900 focus:outline-none bg-white transition-all"></textarea>
+                        </div>
                     `;
-                } else {
-                    html += `
-                        <textarea name="${q.id}" rows="3" placeholder="Type your answer here / መልስዎን እዚህ ይጻፉ..." oninput="saveInput('${q.id}', this.value)"
-                            class="w-full mt-2 px-4 py-2.5 rounded-xl border border-slate-300 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 text-sm outline-none transition bg-white">${val}</textarea>
-                    `;
-                }
-                html += `</div>`;
+                });
+
+                stepDiv.innerHTML = html;
+                container.appendChild(stepDiv);
             });
 
-            html += `</div>`;
-            container.innerHTML = html;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Button visibility management
+            document.getElementById('prevBtn').classList.toggle('hidden', currentStep === 0);
+            document.getElementById('nextBtn').classList.toggle('hidden', currentStep === totalSteps - 1);
+            document.getElementById('submitBtn').classList.toggle('hidden', currentStep !== totalSteps - 1);
         }
 
-        function saveInput(id, value) {
-            formData[id] = value;
+        function updateProgress() {
+            const progressPercent = ((currentStep + 1) / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = `${progressPercent}%`;
+            document.getElementById('percentText.innerText') // safety
+            document.getElementById('percentText').innerText = `${Math.round(progressPercent)}%`;
+            document.getElementById('partTitleHeader').innerText = surveySections[currentStep].title;
         }
 
         function changeStep(direction) {
-    // If going forward (direction === 1), validate current step inputs first
-    if (direction === 1) {
-        const currentStepElement = document.getElementById(`step-${currentStep}`);
-        if (currentStepElement) {
-            // Find all required inputs/textareas in the current step
-            const inputs = currentStepElement.querySelectorAll('input, textarea');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                // Check if the field is empty (ignoring optional fields if any, or check all)
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.classList.add('border-red-500', 'bg-red-50'); // Highlight empty fields
-                } else {
-                    input.classList.remove('border-red-500', 'bg-red-50');
+            if (direction === 1) {
+                const currentStepElement = document.getElementById(`step-${currentStep}`);
+                if (currentStepElement) {
+                    const inputs = currentStepElement.querySelectorAll('textarea, input[required]');
+                    let isValid = true;
+                    
+                    inputs.forEach(input => {
+                        if (!input.value.trim()) {
+                            isValid = false;
+                            input.classList.add('border-red-500', 'bg-red-50');
+                        } else {
+                            input.classList.remove('border-red-500', 'bg-red-50');
+                        }
+                    });
+
+                    if (!isValid) {
+                        alert("Please answer all questions on this page before proceeding.\nወደ ቀጣዩ ገጽ ከመሄድዎ በፊት እባክዎ ሁሉንም ጥያቄዎች ይመልሱ።");
+                        return;
+                    }
                 }
+            }
+
+            currentStep += direction;
+            if (currentStep < 0) currentStep = 0;
+            if (currentStep >= totalSteps) currentStep = totalSteps - 1;
+
+            renderSteps();
+            updateProgress();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Final validation of current step
+            const currentStepElement = document.getElementById(`step-${currentStep}`);
+            const inputs = currentStepElement.querySelectorAll('textarea, input[required]');
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!input.value.trim()) isValid = false;
             });
 
             if (!isValid) {
-                alert("Please answer all questions on this page before proceeding. / ወደ ቀጣዩ ገጽ ከመሄድዎ በፊት እባክዎ ሁሉንም ጥያቄዎች ይመልሱ።");
-                return; // Stop here, do not change step
+                alert("Please complete the final questions before submitting.\nእባክዎ ከመላክዎ በፊት የመጨረሻዎቹን ጥያቄዎች ይሙሉ ቁጥር።");
+                return;
             }
-        }
-    }
 
-    // Proceed with normal step change logic
-    currentStep += direction;
-    if (currentStep < 0) currentStep = 0;
-    if (currentStep >= totalSteps) currentStep = totalSteps - 1;
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
 
-    renderSteps();
-    updateProgress();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            document.getElementById('surveyForm').classList.add('hidden');
-            document.getElementById('successScreen').classList.remove('hidden');
-            
-            // Format summary
-            const summaryBox = document.getElementById('summaryOutput');
-            summaryBox.innerText = JSON.stringify(formData, null, 2);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function copySummary() {
-            const text = JSON.stringify(formData, null, 2);
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            showToast("Responses copied to clipboard! / መልሶቹ ተገለብጠዋል!");
-        }
-
-        function resetSurvey() {
-            Object.keys(formData).forEach(k => delete formData[k]);
-            currentStep = 0;
-            document.getElementById('successScreen').classList.add('hidden');
-            document.getElementById('introCard').classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastMsg').innerText = msg;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                form.classList.add('hidden');
+                document.getElementById('successCard').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+            .catch((error) => {
+                alert("Submission error. Please check your connection and try again.\nየማስረከብ ስגיንጥ ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።");
+                console.error(error);
+            });
         }
     </script>
 </body>
