@@ -24,37 +24,42 @@
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans min-h-full flex flex-col">
+<body class="h-full bg-slate-50 text-slate-800 flex flex-col justify-between selection:bg-yellow-200 selection:text-slate-900">
 
-    <!-- Top Banner / Header -->
-    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div>
-                <!-- <span class="text-xs uppercase tracking-wider text-ethiopiaYellow font-bold">ZXP Languages • Curriculum Adaptation</span> -->
-                <h1 class="text-lg font-bold">Ethiopian Context Needs Assessment</h1>
+    <!-- Header / Navbar -->
+    <header class="bg-slate-900 text-white shadow-md border-b-4 border-ethiopiaYellow">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-ethiopiaGreen via-ethiopiaYellow to-ethiopiaRed flex items-center justify-center font-bold text-slate-900 text-lg shadow">
+                    🇪🇹
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight">Applied English Ethiopia Edition</h1>
+                    <p class="text-xs text-slate-400">Cultural Needs Assessment Survey / የባህል ፍላጎት ጥናት ቅጽ</p>
+                </div>
             </div>
-            <!-- <div class="text-xs bg-slate-800 px-3 py-1.5 rounded-full text-slate-300 border border-slate-700">
-                English / አማርኛ
-            </div> -->
+            <div class="flex items-center gap-2 text-xs bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                <span class="w-2 h-2 rounded-full bg-ethiopiaGreen animate-pulse"></span>
+                <span id="stepIndicator" class="font-medium text-slate-300">Part 1 of 5</span>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-3xl mx-auto px-4 py-8 flex-grow w-full">
+    <!-- Main Container -->
+    <main class="max-w-3xl w-full mx-auto px-4 py-6 sm:py-8 flex-grow">
         
-        <!-- Intro Card -->
-        <div id="introCard" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-6">
-            <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-ethiopiaGreen mb-4 font-bold text-xl">🇪🇹</div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Help Us Build an Engaging English Learning Guide for Ethiopia</h2>
-            <p class="text-slate-600 mb-4 leading-relaxed">
-                We are adapting our A1 English textbook series to reflect local daily life, culture, family structures, and student experiences across Ethiopia. Your insights will directly shape the lessons, stories, and activities.
-            </p>
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6 text-sm text-slate-700 space-y-1">
-                <p><strong>ማሳሰቢያ (Note):</strong> ይህ ቅጽ የእንግሊዝኛ መማሪያ መጽሐፋችንን ከኢትዮጵያባህልና የኑሮ ሁኔታ ጋር ለማጣጣም የሚረዳ መረጃ ለመሰብሰብ የተዘጋጀ ነው።</p>
-                <p class="text-slate-500 text-xs">Estimated time: 5-8 minutes • 5 sections total</p>
+        <!-- Welcome Card / Intro -->
+        <div id="introCard" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-6 transition-all duration-300">
+            <div class="inline-block bg-emerald-50 text-ethiopiaGreen font-semibold text-xs px-3 py-1 rounded-full mb-3 border border-emerald-200">
+                Welcome / እንኳን ደህና መጡ
             </div>
-            <button type="button" onclick="startSurvey()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all flex items-center justify-center gap-2">
-                <span>Start Questionnaire / ጥያቄዎቹን ጀምር</span>
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Help Us Shape English Learning in Ethiopia</h2>
+            <p class="text-sm font-medium text-slate-600 mb-4 font-serif">ለኢትዮጵያ ተማሪዎች የሚስማማ የእንግሊዝኛ መማሪያ መጽሐፍ ለማዘጋጀት ሀሳብዎን ያካፍሉን።</p>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                This questionnaire collects insights about your daily life, cultural traditions, educational routine, and local preferences. Your answers will guide us in creating engaging, locally grounded lessons for the upcoming Ethiopian edition.
+            </p>
+            <button onclick="startSurvey()" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm">
+                <span>Start Questionnaire / ጥናቱን ጀምር</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </button>
         </div>
