@@ -377,11 +377,40 @@
         }
 
         function changeStep(direction) {
-            currentStep += direction;
-            if (currentStep < 0) currentStep = 0;
-            if (currentStep >= surveyParts.length) currentStep = surveyParts.length - 1;
-            renderStep();
+    // If going forward (direction === 1), validate current step inputs first
+    if (direction === 1) {
+        const currentStepElement = document.getElementById(`step-${currentStep}`);
+        if (currentStepElement) {
+            // Find all required inputs/textareas in the current step
+            const inputs = currentStepElement.querySelectorAll('input, textarea');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                // Check if the field is empty (ignoring optional fields if any, or check all)
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('border-red-500', 'bg-red-50'); // Highlight empty fields
+                } else {
+                    input.classList.remove('border-red-500', 'bg-red-50');
+                }
+            });
+
+            if (!isValid) {
+                alert("Please answer all questions on this page before proceeding. / ወደ ቀጣዩ ገጽ ከመሄድዎ በፊት እባክዎ ሁሉንም ጥያቄዎች ይመልሱ።");
+                return; // Stop here, do not change step
+            }
         }
+    }
+
+    // Proceed with normal step change logic
+    currentStep += direction;
+    if (currentStep < 0) currentStep = 0;
+    if (currentStep >= totalSteps) currentStep = totalSteps - 1;
+
+    renderSteps();
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
         function handleFormSubmit(e) {
             e.preventDefault();
