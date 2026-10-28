@@ -65,42 +65,42 @@
         </div>
 
         <!-- Survey Form Container (Hidden initially) -->
-        <form id="surveyForm" onsubmit="handleFormSubmit(event)" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 transition-all duration-300">
-            
-            <!-- Progress Bar -->
-            <div class="mb-6">
-                <div class="flex justify-between text-xs font-semibold text-slate-500 mb-1.5">
-                    <span id="partTitleHeader">Part 1: Daily Life & Domestic Routines</span>
-                    <span id="percentText">20%</span>
-                </div>
-                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div id="progressBar" class="bg-gradient-to-r from-ethiopiaGreen via-ethiopiaYellow to-ethiopiaRed h-full transition-all duration-300 w-1/5"></div>
-                </div>
-            </div>
+         <form id="surveyForm" name="survey" method="POST" netlify onsubmit="handleFormSubmit(event)" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 transition-all duration-300">
+    
+    <!-- Progress Bar -->
+    <div class="mb-6">
+        <div class="flex justify-between text-xs font-semibold text-slate-500 mb-1.5">
+            <span id="partTitleHeader">Part 1: Daily Life & Domestic Routines</span>
+            <span id="percentText">20%</span>
+        </div>
+        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+            <div id="progressBar" class="bg-gradient-to-r from-ethiopiaGreen via-ethiopiaYellow to-ethiopiaRed h-full transition-all duration-300 w-1/5"></div>
+        </div>
+    </div>
 
-            <!-- Sections Container -->
-            <div id="formStepsContainer">
-                <!-- Injected via JavaScript -->
-            </div>
+    <!-- Sections Container -->
+    <div id="formStepsContainer">
+        <!-- Injected via JavaScript -->
+    </div>
 
-            <!-- Navigation Buttons -->
-            <div class="flex justify-between items-center mt-8 pt-6 border-t border-slate-100">
-                <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-sm transition-all flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                    <span>Previous / ኋላ</span>
-                </button>
-                <div class="ml-auto">
-                    <button type="button" id="nextBtn" onclick="changeStep(1)" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
-                        <span>Next / ቀጥል</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </button>
-                    <button type="submit" id="submitBtn" class="hidden px-6 py-2.5 rounded-xl bg-ethiopiaGreen hover:bg-emerald-700 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
-                        <span>Submit Responses / አስረክብ</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </form>
+    <!-- Navigation Buttons -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-slate-100">
+        <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-sm transition-all flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <span>Previous / ኋላ</span>
+        </button>
+        <div class="ml-auto">
+            <button type="button" id="nextBtn" onclick="changeStep(1)" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
+                <span>Next / ቀጥል</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+            <button type="submit" id="submitBtn" class="hidden px-6 py-2.5 rounded-xl bg-ethiopiaGreen hover:bg-emerald-700 text-white font-semibold text-sm shadow-md transition-all flex items-center gap-2">
+                <span>Submit Responses / አስረክብ</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</form>
 
         <!-- Success / Summary Screen (Hidden initially) -->
         <div id="successScreen" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 text-center">
